@@ -1,0 +1,49 @@
+{
+	"groups": [
+		{
+			"keys": "preloading_json",
+			"name": "preload"
+		},
+		{
+			"keys": "circle_json,home_json,information_json,loading_png,speak_json",
+			"name": "public"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/public/circle.json",
+			"type": "sheet",
+			"name": "circle_json",
+			"subkeys": "c_1,c_2,c_3,c_4"
+		},
+		{
+			"url": "assets/public/home.json",
+			"type": "sheet",
+			"name": "home_json",
+			"subkeys": "anxia_speak,end_civilian_failure,end_civilian_sucess,end_fenge,end_gold,end_sure,end_undercover_failure,end_undercover_sucess,first_fastPiPei,first_play,home_canSpeack,home_civilian,home_draw,home_index1,home_index2,home_index3,home_index4,home_index5,home_index6,home_notReady,home_one,home_over,home_ready,home_undercover,home_voteBg,notImg,tempImg"
+		},
+		{
+			"url": "assets/public/information.json",
+			"type": "sheet",
+			"name": "information_json",
+			"subkeys": "lf_age,lf_close,lf_hedImg,lf_man,lf_pos,lf_woman"
+		},
+		{
+			"url": "assets/public/loading.png",
+			"type": "image",
+			"name": "loading_png"
+		},
+		{
+			"url": "assets/public/speak.json",
+			"type": "sheet",
+			"name": "speak_json",
+			"subkeys": "s_1,s_2,s_3"
+		},
+		{
+			"url": "assets/proload/preloading.json",
+			"type": "sheet",
+			"name": "preloading_json",
+			"subkeys": "first_icon"
+		}
+	]
+}

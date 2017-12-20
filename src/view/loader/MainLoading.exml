@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainLoading" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="15e55483d4d"/>
+   	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0xFFFFFF"/>
+	<e:Label y="993" textColor="0x040404" text="当前版本：0.0.1" fontFamily="黑体" horizontalCenter="0.5" id="lb_version" x="10" visible="false"/>
+	<e:Group id="grop_top" y="63" horizontalCenter="0">
+		<e:Image id="img_top_wodi" verticalCenter="0" cacheAsBitmap="false" touchEnabled="false" fillMode="scale" horizontalCenter="0" source="preloading_png" scale9Grid="20,15,140,142" anchorOffsetX="95" anchorOffsetY="96"/>
+	</e:Group>
+	<e:Label id="lblText" text="0%" y="719" horizontalCenter="0" fontFamily="黑体" textColor="0xAD98FB" size="60"/>
+	<e:Label y="299" textColor="0xAD98FB" text="谁是卧底" fontFamily="黑体" size="30" id="lblText0" horizontalCenter="0"/>
+	<e:Group id="img_btn_fastPlay" y="835" horizontalCenter="0" alpha="0">
+		<e:Image source="home_json.common" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Label text="开始游戏" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+</e:Skin>

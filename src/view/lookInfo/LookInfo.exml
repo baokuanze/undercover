@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="LookInfoSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="15e5176eb6c"/>
+	<e:Rect id="rect_btn_close" alpha="0" fillColor="0x000000" y="0" x="2" width="750" height="1334"/>
+	<e:Group id="grop_total" anchorOffsetX="0" anchorOffsetY="0" x="0" y="-1">
+		<e:Rect height="410" width="590" y="0" fillColor="0xFFFFFF" ellipseHeight="20" ellipseWidth="20" strokeColor="0x38B4FC" strokeWeight="2" horizontalCenter="0"/>
+		<e:Rect id="img_btn_rect" height="68" width="74" x="512" y="3" fillColor="0xFFFFFF"/>
+		<e:Image id="img_btn_close" source="lf_close" y="20" right="20" touchEnabled="false"/>
+		<e:Group id="group_img" height="140" width="140" y="40" horizontalCenter="0"/>
+		<e:Group y="200" left="0" right="0">
+			<e:Label id="lb_playName" text="小白" y="34" fontFamily="黑体" textColor="0x000000" horizontalCenter="0"/>
+			<e:Image id="img_sex" x="258" y="2" source="lf_man"/>
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" gap="10"/>
+			</e:layout>
+		</e:Group>
+		<e:Group y="240" left="0" right="0">
+			<e:Group id="group_age" x="-314" y="230">
+				<e:Image source="lf_age" x="777" y="241"/>
+				<e:Label id="lb_age" text="0岁" x="-263" y="199" size="26" textColor="0x292929" fontFamily="黑体"/>
+				<e:layout>
+					<e:HorizontalLayout gap="8" horizontalAlign="center" verticalAlign="middle"/>
+				</e:layout>
+			</e:Group>
+			<e:Group id="group_name" y="240" x="-304">
+				<e:layout>
+					<e:HorizontalLayout gap="8" horizontalAlign="center"/>
+				</e:layout>
+				<e:Image y="251" x="787" source="lf_pos"/>
+				<e:Label id="lb_pos" y="209" textColor="0x292929" text="未知地区" fontFamily="黑体" size="26" x="-253"/>
+			</e:Group>
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" gap="50" verticalAlign="middle"/>
+			</e:layout>
+		</e:Group>
+		<e:Group id="group_threeTotal" y="300" width="590" x="0" visible="false">
+			<e:Group id="group_sendGift" x="15" y="0" visible="false">
+				<e:Rect id="rect_btn_sendGift" height="70" width="160" x="0" y="0" fillColor="0xFD5596" ellipseHeight="20" ellipseWidth="20"/>
+				<e:Label id="lb_gift" text="送礼物" horizontalCenter="0" verticalCenter="0" fontFamily="黑体" size="28" touchEnabled="false"/>
+			</e:Group>
+			<e:Group id="group_addFriend" y="0" x="211">
+				<e:Rect id="rect_btn_addFriend" width="160" y="0" height="70" x="0" fillColor="0x13D082" ellipseHeight="20" ellipseWidth="20"/>
+				<e:Label id="lb_add" text="加好友" horizontalCenter="0" verticalCenter="0" touchEnabled="false" size="28" fontFamily="黑体"/>
+			</e:Group>
+			<e:Group id="grop_lookInfo" y="0" x="402">
+				<e:Rect id="rect_btn_lookInfo" width="160" y="0" height="70" x="0" fillColor="0xFEC103" ellipseWidth="20" ellipseHeight="20"/>
+				<e:Label id="lb_lookInfo" text="查看详情" horizontalCenter="0" verticalCenter="0" touchEnabled="false" fontFamily="黑体"/>
+			</e:Group>
+			<e:layout>
+				<e:BasicLayout/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

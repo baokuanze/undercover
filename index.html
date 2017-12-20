@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>谁是卧底</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="full-screen" content="true" />
+	<meta name="screen-orientation" content="portrait" />
+	<meta name="x5-fullscreen" content="true" />
+	<meta name="360-fullscreen" content="true" />
+	<style>
+        html, body {
+            -ms-touch-action: none;
+            background:white;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+	<script src="http://s.url.cn/qqweb/m/qunopen/component/sdk/opengroup.js?_bid=2173"></script>
+	<script src="http://cdn.xintiao100.com/star/launcher/build.js?n=1.1.48&_bid=2263"></script>
+	<script type="text/javascript" src="https://starcdn.xintiao100.com/starResources/libs/jquery-3.1.1.min.js"></script>
+	<script src="./clientInte.js"></script>
+<!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+<!--modules_files_start-->
+	<script egret="lib" src="libs/modules/egret/egret.js" src-release="libs/modules/egret/egret.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.js" src-release="libs/modules/egret/egret.web.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.js" src-release="libs/modules/game/game.min.js"></script>
+	<script egret="lib" src="libs/modules/res/res.js" src-release="libs/modules/res/res.min.js"></script>
+	<script egret="lib" src="libs/modules/eui/eui.js" src-release="libs/modules/eui/eui.min.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.js" src-release="libs/modules/tween/tween.min.js"></script>
+	<script egret="lib" src="libs/modules/socket/socket.js" src-release="libs/modules/socket/socket.min.js"></script>
+	<!--modules_files_end-->
+
+<!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+<!--other_libs_files_start-->
+<script egret="lib" src="polyfill/promise.js" src-release="polyfill/promise.min.js"></script>
+<!--other_libs_files_end-->
+
+<!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
+<!--game_files_start-->
+	<script egret="game" src="bin-debug/view/common/BaseView.js"></script>
+	<script egret="game" src="bin-debug/Manager.js"></script>
+	<script egret="game" src="bin-debug/controller/gameUI/gameMainController.js"></script>
+	<script egret="game" src="bin-debug/controller/gameUI/gameOverController.js"></script>
+	<script egret="game" src="bin-debug/controller/gameUI/lookInfoController.js"></script>
+	<script egret="game" src="bin-debug/controller/loader/LoaderManagers.js"></script>
+	<script egret="game" src="bin-debug/controller/Util.js"></script>
+	<script egret="game" src="bin-debug/controller/util/BaseURLLoader.js"></script>
+	<script egret="game" src="bin-debug/data/DataManagers.js"></script>
+	<script egret="game" src="bin-debug/data/PomeloData.js"></script>
+	<script egret="game" src="bin-debug/data/Tools.js"></script>
+	<script egret="game" src="bin-debug/GameApp.js"></script>
+	<script egret="game" src="bin-debug/IoConnect.js"></script>
+	<script egret="game" src="bin-debug/JsonpReq.js"></script>
+	<script egret="game" src="bin-debug/LoadingUI.js"></script>
+	<script egret="game" src="bin-debug/controller/ControllerManager.js"></script>
+	<script egret="game" src="bin-debug/ThemeAdapter.js"></script>
+	<script egret="game" src="bin-debug/AssetAdapter.js"></script>
+	<script egret="game" src="bin-debug/view/gameOver/GameOverManager.js"></script>
+	<script egret="game" src="bin-debug/view/gameOver/GameOverUi.js"></script>
+	<script egret="game" src="bin-debug/view/gameUI/GameMainManager.js"></script>
+	<script egret="game" src="bin-debug/view/gameUI/MainUI.js"></script>
+	<script egret="game" src="bin-debug/view/loader/Loading.js"></script>
+	<script egret="game" src="bin-debug/view/loader/MainLoading.js"></script>
+	<script egret="game" src="bin-debug/view/lookInfo/LookInfoManager.js"></script>
+	<script egret="game" src="bin-debug/view/lookInfo/LookInfoUi.js"></script>
+	<script egret="game" src="bin-debug/view/module/BaseCircleImage.js"></script>
+	<script egret="game" src="bin-debug/view/personItem/PersonItem.js"></script>
+	<script egret="game" src="bin-debug/view/personSpeakWords/PersonSpeakWords.js"></script>
+	<script egret="game" src="bin-debug/view/ViewManager.js"></script>
+	<!--game_files_end-->
+</head>
+
+<body>
+	<div style="margin: auto;width: 100%;height: 100%;" class="egret-player" data-entry-class="GameApp" data-orientation="auto" data-scale-mode="fixedWidth" data-frame-rate="60"
+data-content-width="750" data-content-height="1334" data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false"
+data-show-log="false" data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+</div>
+<div id='speak' style='width:100%;height: 100%;line-height: 1;font-family: SimHei;background-color: rgba(0,0,0,0.2);display: none;position: absolute;left: 0;top: 0;margin: 0 auto;text-align: center'>
+<div style="width: 100%;height: 7.4%"></div>
+<div id="speakConten" style="width:18.33rem;height:15.33rem;background-color: white;border-radius: 10px;border: 4px solid #3ab3ff; margin: 0 auto;">
+<span id="myWord" style="font-size:2rem;font-weight: bold;text-align: center;color: #3ab3ff; margin-top: 1.66rem;display: inline-block;"></span>
+<span id='wordDes' style='font-size:1rem;color:#292929;margin-top: 1rem;display: block;'></span>
+<div style="width: 15.33rem;height:3rem;border: 1px solid #3ab3ff;border-radius: 2rem;margin: 0 auto;margin-top: 1rem;line-height: 3rem;">
+<input id='input_myWords' type="text" placeholder='' value="" maxlength="15" autofocus='autofocus' style="background: none;outline: none;border: 0px;font-size: 1.2rem;width: 80%;">
+</div>
+<div id='btn_sure' style="width: 8.66rem;height:2.933rem;background-color: rgb(58,180,255);border-radius: 2rem;text-align: center;color: white;font-size: 1.06rem;line-height: 2.933rem;margin: 0 auto;margin-top: 1rem;"> 确定（30s）
+</div>
+</div>
+</div>
+<script>
+	require("boot");
+    /**
+     * {
+     * "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
+     * "audioType": 0 //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio
+     * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
+     * "retina": //是否基于devicePixelRatio缩放画布
+     * }
+     **/
+	var clientWidth = document.documentElement.clientWidth;
+	var clientHeight = document.documentElement.clientHeight;
+	document.body.style.width = clientWidth + "px";
+	document.body.style.height = clientHeight + "px";
+	var fun = '';
+	window.showUserSpeak = (cb, str) => {
+		fun = cb;
+		$('#wordDes').text(str)
+		var test = document.getElementById('speak');
+		console.log('--------')
+		test.style.display = 'block';
+
+		var input_myWords = document.getElementById("input_myWords");
+		input_myWords.value = '';
+		$("#input_myWords").focus();
+		var btnSure = document.getElementById("btn_sure");
+		btnSure.addEventListener('click', window.doFun, false);
+
+		test.addEventListener('touchmove', function (e) {
+			e.preventDefault();
+			window.event.preventDefault();
+		}, false);
+	}
+
+	window.doFun = function () {
+		var input_myWords = document.getElementById("input_myWords");
+		var btnSure = document.getElementById("btn_sure");
+		var test = document.getElementById('speak');
+
+		if (fun && typeof fun === 'function' && input_myWords.value != '') {
+			test.style.display = 'none';
+			btnSure.innerText = '确认（' + 0 + 's)';
+			fun(input_myWords.value);
+
+		}
+	}
+	window.fillTime = function (str, usersWords) {
+		var test = document.getElementById('myWord');
+		test.innerText = usersWords;
+		if (str) {
+			var btnSure = document.getElementById("btn_sure");
+			btnSure.innerText = '确认（' + str + 's）';
+		}
+	}
+	window.hideSendTime = function () {
+		var test = document.getElementById('speak');
+		test.style.display = 'none';
+		var btnSure = document.getElementById("btn_sure");
+		btnSure.removeEventListener('click', window.doFun, false);
+
+	}
+	egret.runEgret({ renderMode: "canvas", audioType: 0 });
+</script>
+</body>
+
+</html>

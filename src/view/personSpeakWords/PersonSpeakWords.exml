@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Message" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="group_message" y="40" anchorOffsetY="40" touchEnabled="false" anchorOffsetX="89" x="89">
+		<e:Group id="group_messageContainer" y="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Rect anchorOffsetX="0" anchorOffsetY="1" ellipseHeight="16" ellipseWidth="10" scaleX="1" scaleY="1" fillColor="0xffffff" left="0" right="0" top="0" bottom="0" strokeAlpha="1" strokeWeight="2" x="244" y="2" strokeColor="0x3ab3ff"/>
+			<e:Label id="lb_message" text="" anchorOffsetY="0" y="12" textColor="0x000000" bold="false" border="false" bottom="20" displayAsPassword="false" includeInLayout="true" italic="false" lineSpacing="5" top="20" wordWrap="false" visible="true" touchEnabled="false" scaleX="1" scaleY="1" width="150" horizontalCenter="0" verticalAlign="middle" textAlign="center" left="14" right="14" size="28"/>
+		</e:Group>
+		<e:Image id="img_downArrow" source="home_json.speak_arrow" horizontalCenter="0" y="0"/>
+		<e:layout>
+			<e:BasicLayout/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

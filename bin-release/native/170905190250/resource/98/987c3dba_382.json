@@ -1,0 +1,5 @@
+{"file":"circle.png","frames":{
+"c_1":{"x":0,"y":252,"w":190,"h":190,"offX":30,"offY":30,"sourceW":250,"sourceH":250},
+"c_2":{"x":252,"y":232,"w":210,"h":210,"offX":20,"offY":20,"sourceW":250,"sourceH":250},
+"c_3":{"x":252,"y":0,"w":230,"h":230,"offX":10,"offY":10,"sourceW":250,"sourceH":250},
+"c_4":{"x":0,"y":0,"w":250,"h":250,"offX":0,"offY":0,"sourceW":250,"sourceH":250}}}
